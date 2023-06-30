@@ -2,11 +2,17 @@
   "name": "next-todolist",
   "version": "0.1.0",
   "private": true,
+  "engine-strict": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.19"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write .",
     "db:migrate": "npx prisma migrate dev --name ini",
     "db:push": "npx prisma db push",
     "db:seed": "npx prisma db seed"
@@ -19,6 +25,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "moment": "^2.29.4",
     "next": "13.4.7",
     "postcss": "8.4.24",
     "react": "18.2.0",
@@ -29,6 +36,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8"
